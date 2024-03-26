@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USA Housing Price Prediction</title>
+  </head>
+  <body>
+    <h1>USA Housing Price Prediction</h1>
+    <form action="/predict" method="post">
+      <label for="avg_area_income">Avg. Area Income:</label>
+      <input
+        type="number"
+        name="avg_area_income"
+        id="avg_area_income"
+        step="any"
+        required
+      /><br /><br />
+
+      <label for="avg_area_house_age">Avg. Area House Age:</label>
+      <input
+        type="number"
+        name="avg_area_house_age"
+        id="avg_area_house_age"
+        step="any"
+        required
+      /><br /><br />
+
+      <label for="avg_area_rooms">Avg. Area Number of Rooms:</label>
+      <input
+        type="number"
+        name="avg_area_rooms"
+        id="avg_area_rooms"
+        step="any"
+        required
+      /><br /><br />
+
+      <label for="avg_area_bedrooms">Avg. Area Number of Bedrooms:</label>
+      <input
+        type="number"
+        name="avg_area_bedrooms"
+        id="avg_area_bedrooms"
+        step="any"
+        required
+      /><br /><br />
+
+      <label for="area_population">Area Population:</label>
+      <input
+        type="number"
+        name="area_population"
+        id="area_population"
+        step="any"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Predict" />
+    </form>
+    {% if prediction_text %}
+    <h2>{{ prediction_text }}</h2>
+    {% endif %}
+  </body>
+</html>
